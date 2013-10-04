@@ -1,0 +1,15 @@
+projectName: Thought About You
+projectUrl: http://thoughtaboutyou.net/
+projectUrlReadable: thoughtaboutyou.net
+
+paginate: 3
+
+root: 
+permalink: /:year/:month/:day/:title/
+
+markdown: rdiscount
+pygments: true
+lsi: true
+
+googleAnalyticsAccountId: UA-34331994-1
+googleAnalyticsAccountUrl: thoughtaboutyou.net

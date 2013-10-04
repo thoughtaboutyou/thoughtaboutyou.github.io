@@ -1,0 +1,97 @@
+---
+layout: page
+---
+{% for post in paginator.posts %}
+{% include post-variables.html %}
+<article class="container">
+    <h1>
+        <time datetime="{{ post.date }}" title="{{ postDate }}">
+            {{ postDate }}
+        </time>
+        <a href="{{ postUrl }}">{{ postTitle }}</a>
+    </h1>
+    <figure>
+        <a href="{{ postUrl }}"><img src="{{ imageUrl }}" alt="{{ postTitle }}" title="{{ postTitle }}" /></a>
+        <figcaption>
+            {{ postTitle }}
+        </figcaption>
+    </figure>
+    <p>
+        {{ postSummary }}
+    </p>
+
+    <hr />
+</article>
+{% endfor %}
+{% comment %}
+<nav class="pagination">
+    {% if paginator.previous_page %}
+    <a href="/page{{paginator.previous_page}}" class="previous">Previous</a>
+    {% else %}
+    <span class="previous">
+        Previous
+    </span>
+    {% endif %}
+    <span class="page_number ">
+        Page: {{paginator.page}} of {{paginator.total_pages}}
+    </span>
+    {% if paginator.next_page %}
+    <a href="/page{{paginator.next_page}}" class="next ">Next</a>
+    {% else %}
+    <span class="next ">
+        Next
+    </span>
+    {% endif %}
+</nav>
+
+<nav id="post-pagination" class="pagination">
+    {% if paginator.previous_page %}
+    <p class="previous">
+        {% if paginator.previous_page == 1 %}
+        <a href="/">Previous</a>
+        {% else %}
+        <a href="/page{{paginator.previous_page}}">Previous</a>
+        {% endif %}
+    </p>
+    {% else %}
+    <p class="previous disabled">
+        <span>
+            Previous
+        </span>
+    </p>
+    {% endif %}
+    <ul class="pages">
+        <li class="page">
+            {% if paginator.page == 1 %}
+            <span class="current-page">
+                1
+            </span>
+            {% else %}
+            <a href="/">1</a>
+            {% endif %}
+        </li>
+        {% for count in (2..paginator.total_pages) %}
+        <li class="page">
+            {% if count == paginator.page %}
+            <span class="current-page">
+                {{count}}
+            </span>
+            {% else %}
+            <a href="/page{{count}}">{{count}}</a>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    {% if paginator.next_page %}
+    <p class="next">
+        <a href="/page{{paginator.next_page}}">Next</a>
+    </p>
+    {% else %}
+    <p class="next disabled">
+        <span>
+            Next
+        </span>
+    </p>
+    {% endif %}
+</nav>
+{% endcomment %}

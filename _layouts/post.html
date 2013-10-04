@@ -1,0 +1,13 @@
+---
+layout: page
+---
+<article class="container">
+	{% assign post = page %}
+	{% include post-variables.html %}
+	<figure>
+	    <a href="{{ imageUrl }}"><img src="{{ imageUrl }}" alt="{{ postTitle }}" title="{{ postTitle }}" /></a>
+	    <figcaption><time datetime="{{ post.date }}" title="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%Y-%m-%d" }}</time> {{ postTitle }}</figcaption>
+	</figure>
+
+	{{ content }}
+</article>

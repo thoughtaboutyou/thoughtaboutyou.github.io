@@ -1,0 +1,5 @@
+{% capture postDate %}{{ post.date | date: "%Y-%m-%d" }}{% endcapture %}
+{% capture postUrl %}{{ post.url }}{% endcapture %}
+{% capture postTitle %}{{ post.title | xml_escape }}{% endcapture %}
+{% capture imageUrl %}/resources/post-images/{{ postDate }}-{{ post.title | downcase | replace: ':', '-' | replace: ' ', '-' }}{% endcapture %}
+{% capture postSummary %}{{ post.summary }}{% endcapture %}

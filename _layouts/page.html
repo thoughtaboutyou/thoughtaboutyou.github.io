@@ -1,0 +1,31 @@
+---
+layout: bare
+---
+<head lang="en" class="no-js">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>
+        {{ site.projectName | xml_escape }}: {{ page.title | xml_escape }}
+    </title>
+    
+    <script type="text/javascript" src="/resources/javascript/libraries/less-1.4.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quando" />
+    <link rel="stylesheet/less" type="text/css" href="/resources/css/screen.less" />
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico" />
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+</head>
+<body>
+    <header class="container">
+        <h1>
+          <time datetime="{{ page.date }}" title="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+          <a href="{{ page.url | replace: 'index.html','' | xml_escape }}">{{ page.title | xml_escape }}</a>
+        </h1>
+    </header>
+    {{ content }}
+  <footer class="container">
+    <hr />
+    <a href="/"><img src="/resources/images/logo/square-32.png" alt="Thought About You logotype" title="Thought About You logotype" />{{ site.projectUrlReadable }}</a> &copy; 2013 The Thought About You Project
+  </footer>
+ <!--<script type="text/javascript" src="/resources/javascript/main.js"></script>-->
+ {% include ga.html %}
+</body>
