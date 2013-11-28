@@ -2,4 +2,4 @@
 {% capture postUrl %}{{ post.url }}{% endcapture %}
 {% capture postTitle %}{{ post.title | xml_escape }}{% endcapture %}
 {% capture imageUrl %}/resources/post-images/{{ postDate }}-{{ post.title | downcase | replace: ':', '-' | replace: ' ', '-' }}{% endcapture %}
-{% capture postSummary %}{{ post.summary }}{% endcapture %}
+{% capture postExcerpt %}{{ post.excerpt }}{% endcapture %}
