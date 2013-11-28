@@ -2,6 +2,8 @@
 //# Uncomment this block to enable Jekyll LessGenerator plugin
 //---
 
+@text-color: #000;
+
 .container {
 	width: 90%;
 	margin: 0 auto;
@@ -13,6 +15,7 @@ h2,
 h3,
 h4 {
 	font-family: 'Quando', serif;
+	color: @text-color;
 }
 
 h1
@@ -22,11 +25,16 @@ h1
 	}
 }
 
+hr {
+	clear: both;
+}
+
 article {
 	figure {
 		margin: 0;
 
 		img {
+			max-height: 500px;
 			max-width: 100%;
 			cursor: -moz-zoom-in;
 			cursor: -webkit-zoom-in;
@@ -38,10 +46,60 @@ article {
 			display: none;
 		}
 	}
+}
 
-	&:last-of-type {
+div.articles {
+	article {
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+		border-radius: 0.3em;
+
+		a {
+			text-decoration: none;
+
+			figure {
+				float:right;
+
+				img {
+					height: 7em;
+				}
+			}
+
+			h1 {
+				margin: 0;
+			}
+
+			.excerpt {
+				color: @text-color;
+
+				span[data-was-link="true"] {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		&:hover {
+			opacity: 0.7;
+
+			a:before {
+				content: '\21e2';
+				display: block;
+				position: absolute;
+				width: 100%;
+				text-align: center;
+				font-size: 8em;
+				line-height: 0.75em;
+			}
+		}
+
+		&:nth-of-type(odd) {
+			background-color: rgba(0,0,0,0.05);
+		}
+
 		hr {
-			display: none;
+			visibility: hidden;
 		}
 	}
 }
@@ -63,5 +121,10 @@ footer {
 
 	&:hover {
 		opacity: 1;
+	}
+
+	img {
+		vertical-align: middle;
+		margin-right: 1em;
 	}
 }

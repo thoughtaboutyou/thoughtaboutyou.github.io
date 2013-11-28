@@ -1,28 +1,33 @@
 ---
 layout: page
 ---
-{% for post in paginator.posts %}
-{% include post-variables.html %}
-<article class="container">
-    <h1>
-        <time datetime="{{ post.date }}" title="{{ postDate }}">
-            {{ postDate }}
-        </time>
-        <a href="{{ postUrl }}">{{ postTitle }}</a>
-    </h1>
-    <figure>
-        <a href="{{ postUrl }}"><img src="{{ imageUrl }}" alt="{{ postTitle }}" title="{{ postTitle }}" /></a>
-        <figcaption>
-            {{ postTitle }}
-        </figcaption>
-    </figure>
-    <p>
-        {{ postExcerpt }}
-    </p>
+<div class="articles">
+    {% for post in paginator.posts %}
+    {% include post-variables.html %}
+    <article class="container">
+        <a href="{{ postUrl }}">
+            <figure>
+                <img src="{{ imageUrl }}" alt="{{ postTitle }}" title="{{ postTitle }}" />
+                <figcaption>
+                    {{ postTitle }}
+                </figcaption>
+            </figure>
+            <h1>
+                <time datetime="{{ post.date }}" title="{{ postDate }}">
+                    {{ postDate }}
+                </time>
+                {{ postTitle }}
+            </h1>
+            <p class="excerpt">
+                {{ postExcerpt }}
+            </p>
+        </a>
 
-    <hr />
-</article>
-{% endfor %}
+        <hr />
+    </article>
+    {% endfor %}
+</div>
+
 {% comment %}
 <nav class="pagination">
     {% if paginator.previous_page %}
