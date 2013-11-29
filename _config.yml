@@ -11,5 +11,5 @@ markdown: rdiscount
 pygments: true
 lsi: true
 
-googleAnalyticsAccountId: UA-44605644-1
-googleAnalyticsAccountUrl: thoughtaboutyou.net
+googleAnalyticsTrackingId: UA-44605644
+googleAnalyticsTrackingDomain: thoughtaboutyou.net
