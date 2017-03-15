@@ -13,6 +13,3 @@ Released to the public under the [GNU Affero General Public License v3](https://
 
 
 [TAY]: http://thoughtaboutyou.net/
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/thoughtaboutyou/thoughtaboutyou.github.io/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
