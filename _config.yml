@@ -2,13 +2,15 @@ projectName: Thought About You
 projectUrl: http://thoughtaboutyou.net/
 projectUrlReadable: thoughtaboutyou.net
 
+gems: [
+	jekyll-paginate
+]
 paginate: 3
 
 root: 
 permalink: /:year/:month/:day/:title/
 
-markdown: rdiscount
-pygments: true
+highlighter: rouge
 lsi: true
 
 googleAnalyticsTrackingId: UA-44605644-1
