@@ -12,4 +12,4 @@ Released to the public under the [GNU Affero General Public License v3](https://
 
 
 
-[TAY]: http://thoughtaboutyou.net/
+[TAY]: https://thoughtaboutyou.net/
